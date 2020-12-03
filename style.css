@@ -1,0 +1,21 @@
+
+
+  img{
+      object-fit: cover;
+      width: 24%;
+      height: 34%;
+  }
+  
+  body{
+      background-color: hsl(350, 60%, 88%);
+  }
+  @media screen and (max-width: 500px) {
+    div div {
+      width: 40%;
+      margin: 5%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  
