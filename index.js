@@ -1,9 +1,8 @@
 // const express = require('express')
 //  require('dotenv').config()
  
-const APP_KEY = "19273817-9a8405bf09b823926d71d4d3d";
-
-//console.log(process.env);
+const APP_KEY = "19273817-9a8405bf09b823926d71d4d3d"
+// console.log(process.env);
 
 const picture = async ()=> {
 const url = `https://pixabay.com/api/?key=${APP_KEY}&q=cars`;
@@ -21,8 +20,9 @@ const url = `https://pixabay.com/api/?key=${APP_KEY}&q=cars`;
  picture()
  .then(data=> {
    
- console.log( 'resolved', data.hits) 
-
+// console.log( 'resolved', data.hits) 
+const searchBar = document.getElementById('searchBar');
+let photoTag =[];
  for (let i = 0; i < `{data.hits}`.length; i++) {
  let html = document.createElement("div")
  html.className ="inCode"
@@ -30,8 +30,6 @@ const url = `https://pixabay.com/api/?key=${APP_KEY}&q=cars`;
 const img = document.createElement('img');
 
     img.src = `${data.hits[i].largeImageURL}`;
-
-
     const likes = document.createElement('p');
     likes.innerText = `Likes: ${data.hits[i].likes}`;
     const downloads = document.createElement('p');
